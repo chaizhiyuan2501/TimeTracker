@@ -1,0 +1,30 @@
+﻿version: '3.9'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: time_tracker_backend
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    env_file:
+      - ./backend/.env
+
+  db:
+    image: mysql:8.0
+    container_name: time_tracker_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: time_tracker
+      MYSQL_ROOT_PASSWORD: 123456
+    ports:
+      - "3307:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+
+volumes:
+  db-data:

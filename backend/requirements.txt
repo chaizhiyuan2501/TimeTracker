@@ -1,0 +1,17 @@
+﻿fastapi                    # Webアプリケーションフレームワーク（FastAPIフレームワーク）
+uvicorn[standard]          # ASGIサーバー（FastAPIの実行に必要）
+
+sqlalchemy                 # ORMライブラリ（データベース操作を簡単にする）
+pymysql                    # MySQL接続ドライバー（MySQLデータベース用）
+python-dotenv              # .envファイルから環境変数を読み込むためのライブラリ
+
+passlib[bcrypt]            # パスワードのハッシュ化に使用（bcryptで安全に保存）
+python-jose[cryptography]  # JWTトークンの生成と認証（ユーザー認証に使用）
+email-validator            # メールアドレスの形式チェックに使用（FastAPI依存）
+
+alembic                    # データベースのマイグレーション管理ツール（スキーマ変更に対応）
+
+pytest                     # 単体テストライブラリ（テストコード作成に使用）
+httpx                      # 非同期HTTPクライアント（テストやAPI通信で使用）
+
+pendulum                  # 日付・時間を簡単に扱えるライブラリ（datetimeより便利）
