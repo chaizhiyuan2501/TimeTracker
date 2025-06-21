@@ -12,6 +12,7 @@ email-validator            # メールアドレスの形式チェックに使用
 alembic                    # データベースのマイグレーション管理ツール（スキーマ変更に対応）
 
 pytest                     # 単体テストライブラリ（テストコード作成に使用）
+pytest-asyncio          # pytestで非同期テストをサポート
 httpx                      # 非同期HTTPクライアント（テストやAPI通信で使用）
 
 pendulum                  # 日付・時間を簡単に扱えるライブラリ（datetimeより便利）
